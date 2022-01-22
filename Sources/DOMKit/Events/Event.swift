@@ -22,4 +22,8 @@ extension Event {
     public var currentTarget: EventTarget {
         jsObject.currentTarget.object!.bridged(as: EventTarget.self)!
     }
+
+    public func preventDefault() {
+        _ = jsObject.preventDefault!()
+    }
 }
