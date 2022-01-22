@@ -11,6 +11,11 @@ extension EventSpec {
     public static var dragStart     : EventSpec<DragEvent>          { .init(type: "dragstart")     }
     public static var drop          : EventSpec<DragEvent>          { .init(type: "drop")          }
 
+    public static var focus         : EventSpec<FocusEvent>         { .init(type: "focus")         }
+    public static var blur          : EventSpec<FocusEvent>         { .init(type: "blur")          }
+    public static var focusIn       : EventSpec<FocusEvent>         { .init(type: "focusin")       }
+    public static var focusOut      : EventSpec<FocusEvent>         { .init(type: "focusout")      }
+
     public static var mouseDown     : EventSpec<MouseEvent>         { .init(type: "mousedown")     }
     public static var mouseEnter    : EventSpec<MouseEvent>         { .init(type: "mouseenter")    }
     public static var mouseLeave    : EventSpec<MouseEvent>         { .init(type: "mouseleave")    }

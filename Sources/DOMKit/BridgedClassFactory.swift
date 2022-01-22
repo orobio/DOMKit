@@ -58,6 +58,7 @@ enum BridgedClassFactory {
         // Events
         registerBridgedClass(DragEvent.self)
         registerBridgedClass(Event.self)
+        registerBridgedClass(FocusEvent.self)
         registerBridgedClass(MouseEvent.self)
         registerBridgedClass(UIEvent.self)
     }
