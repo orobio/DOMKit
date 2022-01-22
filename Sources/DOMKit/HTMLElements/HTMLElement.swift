@@ -22,4 +22,8 @@ extension HTMLElement {
     public var style: CSSStyleDeclaration {
         CSSStyleDeclaration(from: jsObject.style)!
     }
+
+    public func focus() {
+        _ = jsObject.focus!()
+    }
 }
