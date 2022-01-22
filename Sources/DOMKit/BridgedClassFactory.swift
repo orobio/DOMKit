@@ -28,6 +28,7 @@ enum BridgedClassFactory {
         registerBridgedClass(Blob.self)
         registerBridgedClass(CharacterData.self)
         registerBridgedClass(CSSStyleDeclaration.self)
+        registerBridgedClass(DataTransfer.self)
         registerBridgedClass(Document.self)
         registerBridgedClass(DOMElement.self)
         registerBridgedClass(DOMException.self)
@@ -55,6 +56,7 @@ enum BridgedClassFactory {
         registerBridgedClass(HTMLTableSectionElement.self)
 
         // Events
+        registerBridgedClass(DragEvent.self)
         registerBridgedClass(Event.self)
         registerBridgedClass(MouseEvent.self)
         registerBridgedClass(UIEvent.self)
