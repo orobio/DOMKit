@@ -9,6 +9,8 @@ extension HTMLTagSpec {
 
     public static var input     : HTMLTagSpec<HTMLInputElement>         { .init(tagName: "INPUT")   }
 
+    public static var label     : HTMLTagSpec<HTMLLabelElement>         { .init(tagName: "LABEL")   }
+
     public static var span      : HTMLTagSpec<HTMLSpanElement>          { .init(tagName: "SPAN")    }
 
     public static var style     : HTMLTagSpec<HTMLStyleElement>         { .init(tagName: "STYLE")   }
