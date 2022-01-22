@@ -13,6 +13,8 @@ extension HTMLTagSpec {
 
     public static var span      : HTMLTagSpec<HTMLSpanElement>          { .init(tagName: "SPAN")    }
 
+    public static var select    : HTMLTagSpec<HTMLSelectElement>        { .init(tagName: "SELECT")  }
+
     public static var style     : HTMLTagSpec<HTMLStyleElement>         { .init(tagName: "STYLE")   }
 
     public static var th        : HTMLTagSpec<HTMLTableCellElement>     { .init(tagName: "TH")      }

@@ -50,6 +50,7 @@ enum BridgedClassFactory {
         registerBridgedClass(HTMLInputElement.self)
         registerBridgedClass(HTMLLabelElement.self)
         registerBridgedClass(HTMLSpanElement.self)
+        registerBridgedClass(HTMLSelectElement.self)
         registerBridgedClass(HTMLStyleElement.self)
         registerBridgedClass(HTMLTableCellElement.self)
         registerBridgedClass(HTMLTableElement.self)
