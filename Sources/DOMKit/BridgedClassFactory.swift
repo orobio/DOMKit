@@ -1,16 +1,16 @@
 import JavaScriptKit
 
 enum BridgedClassFactory {
-    private static var factories = [(JSObject) -> Object?]()
+    private static var factories = [JSFunction: (JSObject) -> Object?]()
 
     static func object(from jsObject: JSObject) -> Object? {
         if factories.isEmpty {
             registerBridgedClasses()
         }
 
-        if let factoryIndex = jsObject.swiftBridgedClassFactoryIndex.number,
-           factories.indices.contains(Int(factoryIndex)),
-           let object = factories[Int(factoryIndex)](jsObject) {
+        if let constructor = jsObject.constructor.function,
+           let factory = factories[constructor],
+           let object = factory(jsObject) {
             return object
         }
 
@@ -18,9 +18,7 @@ enum BridgedClassFactory {
     }
 
     private static func registerBridgedClass<Type: Object>(_: Type.Type) {
-        factories.append { jsObject in Type(from: jsObject) }
-        let index = factories.count - 1
-        Type.constructor.prototype.swiftBridgedClassFactoryIndex = index.jsValue()
+        factories[Type.getConstructor()] = { jsObject in Type(from: jsObject) }
     }
 
     private static func registerBridgedClasses() {
