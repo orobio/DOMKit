@@ -8,7 +8,7 @@ public class DataTransfer: Object {
 
 extension DataTransfer {
     public func setData(_ format: String, _ data: String) {
-        _ = jsObject.setData!(format.jsValue(), data.jsValue())
+        _ = jsObject.setData!(format.jsValue, data.jsValue)
     }
 
     public func getData(_ format: String) -> String {

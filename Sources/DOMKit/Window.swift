@@ -20,6 +20,6 @@ extension Window {
     }
 
     public func alert(_ text: String) {
-        _ = jsObject.alert!(text.jsValue())
+        _ = jsObject.alert!(text.jsValue)
     }
 }

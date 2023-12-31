@@ -27,7 +27,7 @@ extension CSSStyleDeclaration {
 
     public subscript(key: String) -> String? {
         get {
-            if let value = jsObject.getPropertyValue!(key.jsValue()).string,
+            if let value = jsObject.getPropertyValue!(key.jsValue).string,
                value != "" {
                 return value
             } else {
@@ -35,7 +35,7 @@ extension CSSStyleDeclaration {
             }
         }
         set {
-            _ = jsObject.setProperty!(key.jsValue(), newValue.jsValue())
+            _ = jsObject.setProperty!(key.jsValue, newValue.jsValue)
         }
     }
 }

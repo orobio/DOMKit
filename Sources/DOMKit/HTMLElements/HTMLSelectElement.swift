@@ -12,7 +12,7 @@ extension HTMLSelectElement {
             jsObject.value.string!
         }
         set {
-            jsObject.value = newValue.jsValue()
+            jsObject.value = newValue.jsValue
         }
     }
 }

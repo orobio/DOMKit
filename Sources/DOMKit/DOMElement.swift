@@ -40,7 +40,7 @@ extension DOMElement {
             jsObject.innerHTML.string!
         }
         set {
-            jsObject.innerHTML = newValue.jsValue()
+            jsObject.innerHTML = newValue.jsValue
         }
     }
 
@@ -53,7 +53,7 @@ extension DOMElement {
             Int(jsObject.scrollTop.number!)
         }
         set {
-            jsObject.scrollTop = newValue.jsValue()
+            jsObject.scrollTop = newValue.jsValue
         }
     }
 
